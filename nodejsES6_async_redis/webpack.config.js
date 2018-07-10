@@ -8,12 +8,13 @@ module.exports = env => {
     const PROD = env.NODE_ENV; // set env
     return {
         context: __dirname,
-
         entry: {
             server: [
                 "babel-polyfill",
                 "./src/server.js",
-                "./src/utils/cacheUtils.js"
+                "./src/routers.js",
+                "./src/utils/cacheUtils.js",
+                "./src/utils/responseUtils.js"
             ]
         },
         output: {
