@@ -58,4 +58,12 @@ export default class ResponseService {
     static success(req, res, data, message) {
         jsonResponse(res, data, {status: Status.OK}, message);
     }
+
+
+    static notFound(req, res){
+        jsonResponse(res, null, {status: Status.NOT_FOUND}, statusMessage(Status.NOT_FOUND));
+    }
+    
+
+
 }
